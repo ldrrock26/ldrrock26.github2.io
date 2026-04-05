@@ -1,0 +1,517 @@
+:root {
+    --mario-red: #e52521;
+    --mario-blue: #1f6feb;
+    --mario-yellow: #ffd447;
+    --mario-green: #43b047;
+    --mario-white: #ffffff;
+    --mario-dark: #14213d;
+    --nintendo-red: #d0021b;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 16px 35px rgba(20, 33, 61, 0.14);
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--mario-dark);
+    background:
+        radial-gradient(circle at top left, rgba(255, 212, 71, 0.5), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(67, 176, 71, 0.22), transparent 24%),
+        linear-gradient(180deg, #fff9ed 0%, #f7fbff 100%);
+    line-height: 1.6;
+}
+
+img,
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, var(--mario-red), var(--mario-blue));
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 0.9rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--mario-white);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+
+.brand-badge {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--mario-yellow);
+    color: var(--mario-red);
+    border: 3px solid var(--mario-white);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    padding: 0.72rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--mario-yellow);
+    color: var(--mario-dark);
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+.page-banner {
+    padding: 2.6rem 0 1.2rem;
+}
+
+.banner-box {
+    background: linear-gradient(135deg, rgba(229, 37, 33, 0.96), rgba(31, 111, 235, 0.96));
+    color: white;
+    padding: 1.8rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-box::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -60px;
+    top: -60px;
+    border-radius: 50%;
+    background: rgba(255, 212, 71, 0.22);
+}
+
+.banner-box h1 {
+    margin: 0 0 0.45rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+}
+
+.banner-box p {
+    margin: 0;
+    max-width: 780px;
+    font-size: 1.02rem;
+}
+
+.section {
+    padding: 1rem 0 2rem;
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 2.7vw, 2.3rem);
+}
+
+.section-subtitle {
+    margin: -0.2rem 0 1.2rem;
+    color: #465067;
+}
+
+.card,
+.panel,
+.video-panel,
+.resource-box,
+.fact-box,
+.material-box,
+.search-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+}
+
+.button,
+button.button,
+.filter-btn,
+.role-btn,
+.toggle-btn,
+.fact-button {
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.15rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-size: 0.96rem;
+}
+
+.button.primary,
+.fact-button,
+.filter-btn.active,
+.role-btn.active {
+    background: var(--mario-red);
+    color: white;
+}
+
+.button.secondary,
+.filter-btn,
+.role-btn,
+.toggle-btn {
+    background: var(--mario-yellow);
+    color: var(--mario-dark);
+}
+
+.button.green {
+    background: var(--mario-green);
+    color: white;
+}
+
+.button.blue {
+    background: var(--mario-blue);
+    color: white;
+}
+
+.button:hover,
+.filter-btn:hover,
+.role-btn:hover,
+.toggle-btn:hover,
+.fact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0 1.3rem;
+}
+
+.series-grid,
+.character-grid,
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.15rem;
+}
+
+.series-card,
+.character-card,
+.resource-box {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 24px rgba(20, 33, 61, 0.1);
+    padding: 1.3rem;
+    border-top: 8px solid var(--mario-blue);
+    transition: 0.25s ease;
+}
+
+.series-card:hover,
+.character-card:hover,
+.resource-box:hover {
+    transform: translateY(-6px);
+}
+
+.series-card h3,
+.character-card h3,
+.resource-box h3 {
+    margin-top: 0;
+}
+
+.series-tag,
+.role-tag,
+.resource-tag {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    font-size: 0.82rem;
+}
+
+.series-tag {
+    background: #eef5ff;
+    color: var(--mario-blue);
+}
+
+.role-tag.hero {
+    background: #ffe8e6;
+    color: var(--mario-red);
+}
+
+.role-tag.royal {
+    background: #fff4c4;
+    color: #8a5b00;
+}
+
+.role-tag.villain {
+    background: #e8ffe8;
+    color: #1f7d2d;
+}
+
+.role-tag.ally {
+    background: #e7f0ff;
+    color: #1351ab;
+}
+
+.character-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.character-photo {
+    width: 78px;
+    height: 78px;
+    flex: 0 0 78px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--mario-yellow);
+    background: white;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.search-card {
+    padding: 1.2rem;
+}
+
+.search-card label {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.search-card input {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border-radius: 14px;
+    border: 2px solid #d7ddea;
+    font-size: 1rem;
+}
+
+.search-card input:focus {
+    outline: none;
+    border-color: var(--mario-blue);
+    box-shadow: 0 0 0 4px rgba(31, 111, 235, 0.12);
+}
+
+.video-panel {
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 16px 35px rgba(20, 33, 61, 0.14);
+}
+
+.video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.fact-box {
+    padding: 1.3rem;
+    margin-top: 1.2rem;
+}
+
+.fact-text {
+    margin: 0.9rem 0 0;
+    font-weight: 700;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-footer {
+    margin-top: 2rem;
+    background: linear-gradient(90deg, var(--mario-dark), #243b67);
+    color: white;
+}
+
+.footer-inner {
+    padding: 1.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--mario-red);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    display: inline-grid;
+    place-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.materialize-theme .banner-box {
+    background: linear-gradient(135deg, var(--nintendo-red), #2a56c6);
+}
+
+.material-box {
+    padding: 1.4rem;
+}
+
+.material-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 980px) {
+    .series-grid,
+    .character-grid,
+    .resource-grid,
+    .material-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-toggle {
+        display: inline-block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 78px;
+        right: 4%;
+        width: min(320px, 92vw);
+        background: linear-gradient(180deg, var(--mario-blue), var(--mario-red));
+        border-radius: 20px;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: 0 16px 28px rgba(0, 0, 0, 0.22);
+        display: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .series-grid,
+    .character-grid,
+    .resource-grid,
+    .material-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-box,
+    .series-card,
+    .character-card,
+    .resource-box,
+    .video-panel,
+    .fact-box,
+    .search-card,
+    .material-box {
+        padding: 1.1rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario Hub | Home</title>
+    <link rel="stylesheet" href="cssstyle.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="htmlpage1.html" class="brand">
+                <span class="brand-badge">M</span>
+                <span>Super Mario Hub</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="htmlpage1.html" class="active">Home</a></li>
+                <li><a href="htmlpage2.html">Characters</a></li>
+                <li><a href="htmlpage3.html">Resources</a></li>
+                <li><a href="materialize.html">Materialize</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-box reveal">
+                <h1>Welcome to the Super Mario Hub</h1>
+                <p>
+                    This site is all about the world of Super Mario. Super Mario is a long-running game series 
+                    with famous characters, and colorful style. This page is made for new mario fans to get a grasp
+                    of what Super Mario is.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="section" id="series">
+            <div class="container">
+                <h2 class="section-title reveal">Super Mario Game Series</h2>
+                <p class="section-subtitle reveal">
+                    Use the buttons to filter the game cards and quickly explore different parts of the series.
+                </p>
+
+                <div class="filter-row reveal">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="2d">2D Classics</button>
+                    <button class="filter-btn" data-filter="3d">3D Adventures</button>
+                    <button class="filter-btn" data-filter="modern">Modern Highlights</button>
+                </div>
+
+                <div class="series-grid">
+                    <article class="series-card reveal" data-category="2d">
+                        <span class="series-tag">2D Classic</span>
+                        <h3>Super Mario Bros.</h3>
+                        <p>
+                            One of the most iconic platform games ever made, this was the first game of mario
+                            that helped define the style of the side-scrolling Mario experience with jumping, pipes,
+                            mushrooms, and Bowser’s castle levels.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="2d">
+                        <span class="series-tag">2D Classic</span>
+                        <h3>Super Mario Bros. 3</h3>
+                        <p>
+                            Known for its creative worlds and power-ups, this game expanded the Mario
+                            formula and is still remembered as one of the most beloved entries in the series.
+                            It is also the first game to introduce where you can select what levels and paths 
+                            you want to take.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="2d">
+                        <span class="series-tag">2D Classic</span>
+                        <h3>Super Mario World</h3>
+                        <p>
+                            This colorful SNES classic introduced Yoshi and brought a bigger map,
+                            hidden exits, and a smooth polished feel that made it a major part of Mario history.
+                            To this day it is considered one of the best mario games of all time.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="3d">
+                        <span class="series-tag">3D Adventure</span>
+                        <h3>Super Mario 64</h3>
+                        <p>
+                            A major turning point for the franchise, this game brought Mario into 3D
+                            and showed how exploration, movement, and open level design could work in a platformer.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="3d">
+                        <span class="series-tag">3D Adventure</span>
+                        <h3>Super Mario Sunshine</h3>
+                        <p>
+                            With its vacation setting and water-based FLUDD mechanic, Sunshine gave Mario
+                            a very distinct identity and offered a more movement-focused approach.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="3d">
+                        <span class="series-tag">3D Adventure</span>
+                        <h3>Super Mario Galaxy</h3>
+                        <p>
+                            Famous for its gravity-based gameplay and cinematic feeling, Galaxy added
+                            a more space-inspired style while still keeping the core Mario charm and movement.
+                            This is game is considered the best 3D mario game of all time. 
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="modern">
+                        <span class="series-tag">Modern Highlight</span>
+                        <h3>Super Mario Odyssey</h3>
+                        <p>
+                            Odyssey mixed open exploration with creative movement and the capture mechanic,
+                            giving players many ways to travel, experiment, and collect moons across large kingdoms.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="modern">
+                        <span class="series-tag">Modern Highlight</span>
+                        <h3>Super Mario Bros. Wonder</h3>
+                        <p>
+                            The newest side-scrolling entry with lively animation and surprising wonder effects,
+                            this game shows how Nintendo keeps classic Mario ideas feeling fresh.
+                        </p>
+                    </article>
+
+                    <article class="series-card reveal" data-category="modern">
+                        <span class="series-tag">Modern Highlight</span>
+                        <h3>Mario Spin-Off Games</h3>
+                        <p>
+                            Beyond platforming, Mario also appears in racing, party, sports, RPG, and puzzle games,
+                            helping the series stay wide range and fun for many different types of players.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="fact-box reveal">
+                    <h3>Random Mario Fact</h3>
+                    <button class="fact-button" id="factButton">Show Another Fact</button>
+                    <p class="fact-text" id="factText">
+                        Mario’s games have included platforming, racing, sports, party games, RPGs, and more.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Super Mario Hub | Home Page</p>
+            <p>Made by Luke Rudd</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>Super Mario Hub | Resources</title>
+    <link rel="stylesheet" href="cssstyle.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="htmlpage1.html" class="brand">
+                <span class="brand-badge">M</span>
+                <span>Super Mario Hub</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="htmlpage1.html">Home</a></li>
+                <li><a href="htmlpage2.html">Characters</a></li>
+                <li><a href="htmlpage3.html" class="active">Resources</a></li>
+                <li><a href="materialize.html">Materialize</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-box reveal">
+                <h1>Resources and Video</h1>
+                <p>
+                    This page collects useful links and a YouTube video embed
+                    about the history of Super Mario so the site has a stronger reference and learning section.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Helpful Super Mario Resources</h2>
+            <p class="section-subtitle reveal">
+                These sections help the site feel complete by mixing links and media.
+            </p>
+
+            <div class="resource-grid">
+                <article class="resource-box reveal">
+                    <span class="resource-tag series-tag">Official</span>
+                    <h3>Nintendo's Mario Website</h3>
+                    <p>
+                        The official website for character and game information, especially for newer releases.
+                    </p>
+                    <a class="button primary" href="https://mario.nintendo.com/" target="_blank" rel="noopener noreferrer">
+                        Visit Nintendo
+                    </a>
+                </article>
+
+                <article class="resource-box reveal">
+                    <span class="resource-tag series-tag">Reference</span>
+                    <h3>MarioWiki</h3>
+                    <p>
+                        This is a fan-made page with information about game entries, characters, locations,
+                        and franchise history in more detail.
+                    </p>
+                    <a class="button blue" href="https://www.mariowiki.com/" target="_blank" rel="noopener noreferrer">
+                        Open MarioWiki
+                    </a>
+                </article>
+
+                <article class="resource-box reveal">
+                    <span class="resource-tag series-tag">Nintendo News</span>
+                    <h3>Nintendo News Page</h3>
+                    <p>
+                        Useful for release updates, announcements, and newer Nintendo-related game information.
+                    </p>
+                    <a class="button green" href="https://www.nintendo.com/us/whatsnew/" target="_blank" rel="noopener noreferrer">
+                        Read News
+                    </a>
+                </article>
+            </div>
+
+            <section class="section">
+                <div class="video-panel reveal">
+                    <h3>Super Mario Video</h3>
+                    <div class="video-wrap">
+                        <iframe
+                            src="https://www.youtube.com/embed/EhLY-KgAhWY"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Super Mario Hub | Resources Page</p>
+            <p>Made by Luke Rudd</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
