@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Mario Hub | Materialize</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="cssstyle.css" />
+</head>
+<body class="materialize-theme">
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="htmlpage1.html" class="brand">
+                <span class="brand-badge">M</span>
+                <span>Super Mario Hub</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open navigation">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="htmlpage1.html">Home</a></li>
+                <li><a href="htmlpage2.html">Characters</a></li>
+                <li><a href="htmlpage3.html">Resources</a></li>
+                <li><a href="materialize.html" class="active">Materialize</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-box reveal">
+                <h1>Materialize Page</h1>
+                <p>
+                    This page uses Materialize components while still matching the rest of the site.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="material-box reveal">
+                        <h2>Customized Materialize Elements</h2>
+                        <p>
+                            This page demonstrates buttons, cards, a collapsible section, and a Materialized boxed image.
+                        </p>
+
+                        <a class="waves-effect waves-light btn red darken-2 modal-trigger" href="#marioModal">Open Modal</a>
+                        <a class="waves-effect waves-light btn blue darken-2" href="htmlpage1.html">Back to Home</a>
+                        <a class="waves-effect waves-light btn yellow darken-2 black-text" href="htmlpage3.html">Go to Resources</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 l4">
+                    <div class="card red lighten-1 white-text reveal">
+                        <div class="card-content">
+                            <span class="card-title">Mario Red</span>
+                            <p>This card uses a Mario inspired red palette for stronger theme consistency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l4">
+                    <div class="card blue lighten-1 white-text reveal">
+                        <div class="card-content">
+                            <span class="card-title">Nintendo Blue</span>
+                            <p>The blue keeps the site bright and playful while balancing out the warmer colors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 l4">
+                    <div class="card yellow lighten-2 black-text reveal">
+                        <div class="card-content">
+                            <span class="card-title">Coin Yellow</span>
+                            <p>The yellow adds energy and helps buttons and highlights stand out more clearly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="material-box reveal">
+                        <h3>Materialboxed Circular Image</h3>
+                        <img
+                            class="materialboxed responsive-img"
+                            style="border-radius: 50%; border: 8px solid #ffd447; max-width: 320px; margin: 0 auto;"
+                            alt="Mario themed circular emblem"
+                            src="https://upload.wikimedia.org/wikipedia/en/5/5c/Mario_by_Shigehisa_Nakaue.png"
+                        />
+                        <p style="margin-top: 1rem;">
+                            Click the image to see the Materialize image viewer effect.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col s12 l6">
+                    <div class="material-box reveal">
+                        <h3>Materialize Collapsible</h3>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header"><strong>Theme</strong></div>
+                                <div class="collapsible-body">
+                                    <span>The theme stays focused on Super Mario, Nintendo colors, and a game-inspired style.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong>Navigation</strong></div>
+                                <div class="collapsible-body">
+                                    <span>The same navigation appears on every page so the site feels more consistent and easier for user.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><strong>Tools Used</strong></div>
+                                <div class="collapsible-body">
+                                    <span>This site combines custom CSS, responsive layout, JavaScript interactions, video embedding, and Materialize components.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="marioModal" class="modal">
+                <div class="modal-content">
+                    <h4>Super Mario Hub Modal</h4>
+                    <p>
+                        This modal is here to show a working Materialize interaction inside the same Mario-themed design.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>Super Mario Hub | Materialize Page</p>
+            <p>Made by Luke Rudd</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
